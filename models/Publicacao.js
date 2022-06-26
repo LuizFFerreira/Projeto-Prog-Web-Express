@@ -2,7 +2,7 @@ const MongoClient = require("mongodb").MongoClient;
 
 module.exports = class Publicacao{
 
-    static async insert(data){
+    static async insert(data, usernamed){
         const conn = await this.startConn(),
               db = conn.db();
         
@@ -15,7 +15,7 @@ module.exports = class Publicacao{
         db.collection("publicacoes").insertOne({
             titulo: data.titulo,
             conteudo: data.conteudo,
-            username: "vitor",
+            username: usernamed,
             publicacao: today,
             ultima_atualizacao: today,
             visualizacoes: 0
