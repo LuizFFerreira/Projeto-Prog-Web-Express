@@ -391,6 +391,23 @@ label{
     margin-bottom: 50px;
 }
 
+.link-funcionalidades1{
+    width: 10%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    background: rgb(255, 122, 0);
+    border: none;
+    font-size: 14px;
+    margin: auto;
+    margin-top: 16px;
+    margin-bottom: 50px;
+}
+
 #home-fixed{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
