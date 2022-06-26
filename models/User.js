@@ -30,6 +30,16 @@ module.exports = class User{
         return user;
     }
 
+    static async findUserSenha(username, senha){
+        const conn = await this.startConn(),
+              db = conn.db();
+        
+        let user = await db.collection("users").findOne({username: username, senha: senha});
+
+        conn.close();
+        return user;
+    }
+
     static async findSome(query){
         const conn = await this.startConn(),
               db = conn.db();
